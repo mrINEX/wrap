@@ -78,6 +78,7 @@ window.onload = function() {
   wrapSquares.map(({ quantity, classColor }) => {
     Array(quantity).fill(' ').forEach(() => {
       const square = document.createElement('div');
+      square.setAttribute('draggable', 'true');
       square.classList.add(classColor, 'square');
       squareArea.append(square);
     });
@@ -86,4 +87,23 @@ window.onload = function() {
   wrapperCollectionArea.append(collectingArea);
   containerWrap.append(wrapperCollectionArea, squareArea);
   document.querySelector('body').append(containerWrap);
+
+  // hundler draggable
+  let dragged;
+  let draggedClient;
+  document.addEventListener('dragstart', ({ target }) => {
+      draggedClient = target.getBoundingClientRect();
+      if (target.classList.contains('square')) {
+        dragged = target;
+      }
+  });
+  document.addEventListener('dragover', (event) => {
+      event.preventDefault();
+  });
+  document.addEventListener('drop', ({ target }) => {
+    if (target.classList.contains('collect-square')) {
+      dragged.style.margin = '0';
+      target.append(dragged);
+    }
+  });
 }

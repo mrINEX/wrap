@@ -37,6 +37,10 @@
   margin: 1px;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid white;
+  }
 }
 
 .beige {

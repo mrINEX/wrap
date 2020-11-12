@@ -13,7 +13,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'GAME',
+      title: 'volha`s project',
       filename: '../index.html', // [duild]: filename: '../index.html' --- filename: 'index.html'
     }),
     new MiniCssExtractPlugin({

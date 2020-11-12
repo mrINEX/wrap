@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box; }
+
+.wrap-square {
+  width: 60px;
+  height: 60px; }
+
+.container-wrap {
+  display: flex; }
+
+.collecting-area,
+.square-area {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  padding: 10px;
+  gap: 0px; }
+
+.collect-square {
+  width: 60px;
+  height: 60px;
+  background-color: gray;
+  margin: 1px; }
+
+.square {
+  width: 60px;
+  height: 60px;
+  margin: 1px;
+  background-size: cover;
+  background-position: center; }
+
+.beige {
+  background-image: url(132d4d2400cded8eb132bdd206609bea.jpg); }
+
+.letters-are-blue {
+  background-image: url(489651c8166db0e306059e3ab4a81b03.jpg); }
+
+.yellow {
+  background-image: url(eb7b141a471c1c669f327cfb7b669f75.jpg); }
+
+.snake {
+  background-image: url(cb971d7f447df93b0e552d9e73d351b5.jpg); }
+
+.brown-flowers {
+  background-image: url(3bd555f8407f2f990bc9c551e53ef91d.jpg); }
+
+.red-flowers {
+  background-image: url(d74f6c61d25ef9655ec938cf8b89e085.jpg); }
+
+.red {
+  background-image: url(f5849d77da1dd1952073839491af119b.jpg); }
+
+.citric {
+  background-image: url(7ebd0e210712bd61b8db1fef83d2729c.jpg); }
+
+.light-yellow {
+  background-image: url(dd10eafb073b6cc22f8b22e1ca2f9037.jpg); }
+
+.light-gray {
+  background-image: url(37e4927ac95e47ddc47328f85d7aee58.jpg); }
+
+.gray {
+  background-image: url(29317bf2d28536b74f9ee22bee3705f2.jpg); }
+
+.dark-green {
+  background-image: url(a6654ebf5c9e7dc265e0ec67c3ca4d65.jpg); }
+
+.dark-blue {
+  background-image: url(c0b6fcb81a37a9cc3481de47a383551c.jpg); }
+

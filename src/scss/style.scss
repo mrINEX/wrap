@@ -1,3 +1,92 @@
 // Abstract
 @import "abstract/constants";
 @import "abstract/mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+.wrap-square {
+  width: 60px;
+  height: 60px;
+}
+
+.container-wrap {
+  display: flex;
+}
+
+.collecting-area,
+.square-area {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  padding: 10px;
+  gap: 0px;
+}
+
+.collect-square {
+  width: 60px;
+  height: 60px;
+  background-color: gray;
+  margin: 1px;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  margin: 1px;
+  background-size: cover;
+  background-position: center;
+}
+
+.beige {
+  background-image: url('../assets/squares/beige_10.jpg');
+}
+
+.letters-are-blue {
+  background-image: url('../assets/squares/letters-are-blue_10.jpg');
+}
+
+.yellow {
+  background-image: url('../assets/squares/yellow_4.jpg');
+}
+
+.snake {
+  background-image: url('../assets/squares/snake_16.jpg');
+}
+
+.brown-flowers {
+  background-image: url('../assets/squares/brown-flowers_4.jpg');
+}
+
+.red-flowers {
+  background-image: url('../assets/squares/red-flowers_8.jpg');
+}
+
+.red {
+  background-image: url('../assets/squares/red_17.jpg');
+}
+
+.citric {
+  background-image: url('../assets/squares/citric_10.jpg');
+}
+
+.light-yellow {
+  background-image: url('../assets/squares/light-yellow_2.jpg');
+}
+
+.light-gray {
+  background-image: url('../assets/squares/light-gray_10.jpg');
+}
+
+.gray {
+  background-image: url('../assets/squares/gray_8.jpg');
+}
+
+.dark-green {
+  background-image: url('../assets/squares/dark-green_8.jpg');
+}
+
+.dark-blue {
+  background-image: url('../assets/squares/dark-blue_4.jpg');
+}

@@ -21,20 +21,23 @@
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(12, 1fr);
   padding: 10px;
-  gap: 0px;
+  gap: 1px;
 }
 
 .collect-square {
   width: 60px;
   height: 60px;
-  background-color: gray;
-  margin: 1px;
+  background-color: #cee0d1;
+}
+
+.shuffle-button {
+  height: 26px;
+  margin: 10px;
 }
 
 .square {
   width: 60px;
   height: 60px;
-  margin: 1px;
   background-size: cover;
   background-position: center;
   cursor: pointer;

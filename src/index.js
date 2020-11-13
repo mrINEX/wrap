@@ -53,6 +53,10 @@ const wrapSquares = [
   },
 ];
 
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
+}
+
 window.onload = function() {
   console.log('Hello Volha =)');
 
@@ -84,8 +88,33 @@ window.onload = function() {
     });
   });
 
+  // shuffle button
+  const shuffleButton = document.createElement('button');
+  shuffleButton.classList.add('shuffle-button');
+  shuffleButton.textContent = 'shuffle';
+  const links = [];
+  shuffleButton.onclick = () => {
+    if (squareArea.children.length && squareArea.children.length > 3) {
+      const shuffled = shuffle(Array.from(squareArea.children));
+      shuffled.forEach((el, index) => {
+        if (index < 108) {
+          links.push(el);
+          collectingArea.children[index].append(el);
+        }
+      });
+    } else {
+      const shuffled = shuffle(links);
+      shuffled.forEach((el, index) => {
+        if (index < 108) {
+          collectingArea.children[index].innerHTML = '';
+          collectingArea.children[index].append(el);
+        }
+      });
+    }
+  }
+
   wrapperCollectionArea.append(collectingArea);
-  containerWrap.append(wrapperCollectionArea, squareArea);
+  containerWrap.append(wrapperCollectionArea, shuffleButton, squareArea);
   document.querySelector('body').append(containerWrap);
 
   // hundler draggable
@@ -102,7 +131,6 @@ window.onload = function() {
   });
   document.addEventListener('drop', ({ target }) => {
     if (target.classList.contains('collect-square')) {
-      dragged.style.margin = '0';
       target.append(dragged);
     }
   });

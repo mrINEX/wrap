@@ -142,9 +142,6 @@ window.onload = function() {
 
       parrentTarget.append(dragged);
       parrentDragget.append(target);
-
-      console.log('dragged.parentNode:', dragged.parentNode, dragged);
-      console.log('target.parentNode:', target.parentNode, target);
     }
   });
 }

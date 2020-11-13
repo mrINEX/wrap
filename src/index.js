@@ -133,5 +133,18 @@ window.onload = function() {
     if (target.classList.contains('collect-square')) {
       target.append(dragged);
     }
+    if (target.classList.contains('square')) {
+      let parrentTarget = target.parentNode;
+      let parrentDragget = dragged.parentNode;
+
+      target.remove();
+      dragged.remove();
+
+      parrentTarget.append(dragged);
+      parrentDragget.append(target);
+
+      console.log('dragged.parentNode:', dragged.parentNode, dragged);
+      console.log('target.parentNode:', target.parentNode, target);
+    }
   });
 }
